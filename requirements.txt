@@ -1,0 +1,5 @@
+langchain[all]
+llama-cpp-python 
+flask
+lxml
+PyYAML
