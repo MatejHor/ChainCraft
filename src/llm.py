@@ -19,7 +19,7 @@ class LLMmodel:
         n_gpu_layers=32,
         n_ctx=50000,
     ):
-        model_path = os.path.join(".", "llm_models", name)
+        model_path = os.path.join(".", "models", name)
 
         self.llm = LlamaCpp(
             model_path=model_path,
