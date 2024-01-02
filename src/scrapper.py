@@ -16,7 +16,7 @@ class Scrapper:
         self.top_lvl_domain = self.load_domains()
 
     def load_domains(self, path="domains.yaml"):
-        path = os.path.join("data", path)
+        path = os.path.join("configs", path)
         config = load_yaml(path)
         return config.get("top-lvl-domain", [])
 

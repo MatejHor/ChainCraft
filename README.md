@@ -15,9 +15,12 @@ python app.py
 ```
 
 # Architecture
-- data
-- models
-- src
-- app.py
-- download_model.sh
-- README.md
+- configs - Configuration files
+    - domains.yaml - List of most common domains
+- models - Directory for loading LLM models
+- src - Main code
+    - llm.py - Code model for LLM 
+    - scrapper.py - Code model for scraping
+    - utils.py - Additional reusable functions
+- app.py - Main app
+- download_model.sh - Script for downloading test LLM model
