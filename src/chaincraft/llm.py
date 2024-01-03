@@ -4,12 +4,15 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
 import os
 
-class LLMmodel:
+from ChainCraft.src.chaincraft.module import Module
+
+class LLMmodel(Module):
     def __init__(self, **kwargs):
         self.callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
         self.llm = None
+        super().__init__()
 
-    def set_paramteres(
+    def setup(
         self,
         name="llama13b.gguf",
         temperature=0.3,
@@ -32,7 +35,7 @@ class LLMmodel:
             verbose=verbose,
         )
 
-    def get_prompt(self, prompt):
+    def process(self, prompt):
         if self.llm:
             return self.llm(prompt)
         return "Model is not loaded!"

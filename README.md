@@ -19,8 +19,10 @@ python app.py
     - domains.yaml - List of most common domains
 - models - Directory for loading LLM models
 - src - Main code
-    - llm.py - Code model for LLM 
-    - scrapper.py - Code model for scraping
-    - utils.py - Additional reusable functions
+    - chaincraft - Main module
+        - llm.py - Code model for LLM 
+        - utils.py - Additional reusable functions
+        - module.py - Abstract class for all modules
+    - scrapper - Scrapper module
 - app.py - Main app
 - download_model.sh - Script for downloading test LLM model
